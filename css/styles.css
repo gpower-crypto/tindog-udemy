@@ -1,35 +1,57 @@
 body {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
+  text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat';
+}
+
+p {
+  color: #8f8f8f;
+}
+
+
+/*Order of specificity - Id then Class then HTML tags.- Same order of priority.
+*********USE ID selectors sparingly like only for section tags to avoid inefficiency********
+Try to keep class name very specific and short
+!!!!!!!!!!!!!AVOID INLINE STYLING- BAD CSS PRACTICES!!!!!!!!!!!!!!!!!!!!*/
+
+
+/* Headings */
+.big-heading {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.section-heading {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+
 #title {
-  background-color: #ff4c68;
+
+  text-align: left;
 }
 
 .container-fluid {
   padding: 4% 15% 7%;
 }
 
-h1 {
-  font-family: 'Montserrat';
+
+/* Section */
+.coloured-section {
+  background-color: #ff4c68;
   color: white;
-  font-size: 2.5rem;
-  line-height: 1.5;
-  font-weight: 900;
 }
 
-h2{
-  font-family: 'Montserrat';
-  font-weight: 800;
-  font-size: 2.5rem;
-  line-height: 1.5;
+.white-section {
+  background-color: white;
 }
 
-h3 {
-  font-family: 'Montserrat';
-  font-weight: 800;
-  font-size: 1.2rem;
-}
 
 /* Navigation Bar */
 .navbar {
@@ -46,11 +68,13 @@ h3 {
   padding: 0 14px 0 14px;
 }
 
+
 /* Download Buttons */
 .btn {
   margin: 5% 3% 5% 0;
   /* Top right left bottom */
 }
+
 
 /* Title Image */
 .title-image {
@@ -60,12 +84,17 @@ h3 {
   right: 25%;
 }
 
+
 /* Features */
 #features {
   padding: 7% 9%;
   /* 7% top and bottom, 15% left and right */
-  background-color: white;
   position: relative;
+}
+
+.feature-title {
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 
 .icon {
@@ -79,82 +108,94 @@ h3 {
 }
 
 .feature-box {
-  text-align: center;
   padding: 0 5%;
 }
 
 .pstyle {
   color: #8f8f8f;
   font-size: .9rem;
-  text-align: center;
 }
+
 
 /* Testimonial Section */
 #testimonials {
-    /* padding is meant to bring the text to the center of the page */
-  text-align: center;
+  /* padding is meant to bring the text to the center of the page */
   background-color: #ef8172;
-  color: #fff;
 }
 
-.testimonial-image{
+.testimonial-text {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
   width: 10%;
   border-radius: 100%;
   margin: 20px;
 }
 
-.carousel-item{
-padding: 7% 15%;
+.carousel-item {
+  padding: 7% 15%;
 }
 
-#press{
+
+#press {
   background-color: #ef8172;
-  text-align: center;
   padding-bottom: 3%;
 }
 
-.press-logo{
+.press-logo {
   width: 15%;
   margin: 20px 20px 50px;
 }
 
+
 /* Pricing Section */
-#pricing{
-padding: 120px;
-text-align: center;
+#pricing {
+  padding: 120px;
 }
 
-.pricing-column{
+.price-text {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
   padding: 3% 2%;
-
 }
+
+
+#cta {
+  padding: 6% 17%;
+}
+
+
+/* Footer Section */
+#footer {
+  padding: 6%;
+}
+
+.message-icon {
+  margin: 2% 1%;
+}
+
+.last-line{
+  text-align:center;
+  font-size:15px;
+  font-family:'Montserrat';
+}
+
 
 @media (max-width:991px) {
-
   #title {
-  text-align: center;
+    text-align: center;
   }
 
-  .title-image{
+  .title-image {
     position: static;
     width: 60%;
     transform: rotate(0);
   }
-}
-
-
-#cta{
-   background-color: #ff4c68;
-   text-align: center;
-   padding: 6% 17%;
-
-}
-/* Footer Section */
-#footer{
-text-align: center;
-padding: 6%;
-}
-
-.message-icon{
-  margin: 2% 1% ;
 }
